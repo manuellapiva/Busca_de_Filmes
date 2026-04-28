@@ -74,7 +74,18 @@ function App () {
 
   return (
     <>
-    
+      <div className="container">
+        <div className="titulo">
+          <h1>🎞️ BUSCA DE FILMES 🎞️</h1>
+        </div>
+
+        <input
+          type="text"
+          placeholder="Digite o nome do filme..."
+          value={filme}
+          onChange={(e) => setFilme(e.target.value)}
+        />
+      </div>
     </>
   )
 }
