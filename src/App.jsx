@@ -103,6 +103,30 @@ function App () {
       </div> 
       {loading && <p>⌛ Carregando...</p>}
       {erro && <p>❌ {erro}</p>}
+
+            <div className="lista">
+        {lista.map((item, index) => (
+          <div
+            className="card"
+            key={index}
+            onClick={() => buscarDetalhes(item["#IMDB_ID"])}
+          >
+            <img
+              src={
+                item["#IMG_POSTER"] && item["#IMG_POSTER"] !== "N/A"
+                  ? item["#IMG_POSTER"]
+                  : "https://via.placeholder.com/150"
+              }
+              alt={item["#TITLE"]}
+            />
+
+            <p><strong>Título : {item["#TITLE"]}</strong></p>
+            <p><b>Ano : </b>{item["#YEAR"]}</p>
+            <p><b>Atores : </b>{item["#ACTORS"]}</p>
+          </div>
+        ))}
+      </div>
+      
       </div>
     </>
   )
