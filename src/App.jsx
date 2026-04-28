@@ -85,6 +85,13 @@ function App () {
           value={filme}
           onChange={(e) => setFilme(e.target.value)}
         />
+        <div className="botoes">
+        <button onClick={buscarFilmes} disabled={loading}>
+          {loading ? 'Carregando...' : 'Buscar'}
+        </button>
+
+        <button onClick={limparBusca}>Limpar</button>
+      </div> 
       </div>
     </>
   )
