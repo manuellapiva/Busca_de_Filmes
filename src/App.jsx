@@ -44,6 +44,27 @@ function App () {
     }
   };
 
+    const buscarDetalhes = async (id) => {
+    setLoading(true);
+    setErro(null);
+
+    try {
+      const res = await fetch(
+        `https://imdb.iamidiotareyoutoo.com/search?tt=${id}&lsn=${temporada}`
+      );
+
+      if (!res.ok) throw new Error('Erro ao buscar detalhes');
+
+      const data = await res.json();
+      setDetalhes(data);
+
+    } catch (err) {
+      setErro('Erro ao carregar detalhes', err.message);
+    } finally {
+      setLoading(false);
+    }
+  };
+
   return (
     <>
     
