@@ -14,6 +14,36 @@ function App () {
     if (ultimo) setFilme(ultimo);
   }, []);
 
+    const buscarFilmes = async () => {
+    if (!filme.trim()) return;
+
+    setLoading(true);
+    setErro(null);
+    setLista([]);
+    setDetalhes(null);
+
+    try {
+      const res = await fetch(
+        `https://imdb.iamidiotareyoutoo.com/search?q=${encodeURIComponent(filme)}`
+      );
+
+      if (!res.ok) throw new Error('Erro na requisição');
+
+      const data = await res.json();
+
+      if (!data.description || data.description.length === 0) {
+        throw new Error('Nenhum resultado encontrado');
+      }
+
+      setLista(data.description);
+      localStorage.setItem('ultimaBusca', filme);
+    } catch (err) {
+      setErro(err.message);
+    } finally {
+      setLoading(false);
+    }
+  };
+
   return (
     <>
     
