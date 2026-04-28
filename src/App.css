@@ -53,3 +53,47 @@ button {
   transition: all 0.3s;
   box-shadow: 0 2px 8px solid rgba(39, 39, 194, 0.37);
 }
+
+button:hover:not(:disabled) {
+  background-color: rgb(39, 39, 194);
+  transform: translateY(-2px);
+  box-shadow: 0 4px 12px rgba(39, 39, 194, 0.37);
+}
+
+button:disabled {
+  background-color: #cccccc;
+  cursor: not-allowed;
+}
+
+.resultado {
+  margin-top: 20px;
+  padding: 15px;
+  background-color: #f0f0f0;
+  border-left: 4px solid rgb(39, 39, 194);
+  border-radius: 4px;
+  min-height: 50px;
+}
+
+.resultado h3 {
+  margin-top: 0;
+}
+
+.resultado p {
+  margin: 10px 0;
+}
+
+.card {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  background-color: white;
+  padding: 20px;
+  border-radius: 8px;
+  width: fit-content; 
+}
+
+.card img {
+  border: 3px solid rgb(23, 23, 121);
+  border-radius: 5px;
+}
