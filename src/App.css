@@ -122,3 +122,23 @@ input {
 img {
   width: 200px;
 }
+
+.lista {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.detalhes {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  gap: 20px;
+  border-top: 4px solid rgb(39, 39, 194);
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+  padding: 20px;
+  border-radius: 15px;
+}
