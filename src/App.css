@@ -97,3 +97,28 @@ button:disabled {
   border: 3px solid rgb(23, 23, 121);
   border-radius: 5px;
 }
+
+input {
+  width: 580px;
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  font-size: 16px;
+  margin-bottom: 10px;
+}
+
+.titulo img {
+  width: 67px;
+}
+
+.titulo {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 50px;
+  margin-bottom: 30px;
+}
+
+img {
+  width: 200px;
+}
