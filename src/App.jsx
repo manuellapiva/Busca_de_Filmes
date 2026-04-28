@@ -126,7 +126,31 @@ function App () {
           </div>
         ))}
       </div>
-      
+      {detalhes && (
+        <div className="detalhes">
+          <h2>🎬 Detalhes</h2>
+
+          <img
+            src={detalhes?.image || "https://via.placeholder.com/200"}
+            alt={detalhes?.name}
+          />
+
+          <p><strong>{detalhes.name}</strong></p>
+          <p>{detalhes.description}</p>
+
+          <a href={detalhes.url} target="_blank" rel="noreferrer">
+            Ver no IMDb
+          </a>
+          {detalhes?.review && (
+            <div className="review">
+              <h3>⭐ Review ⭐</h3>
+              <p><strong>Autor:</strong> {detalhes.review.author}</p>
+              <p>{detalhes.review.content}</p>
+              <p><strong>Nota:</strong> {detalhes.review.rating}</p>
+            </div>
+          )}
+        </div>
+      )}
       </div>
     </>
   )
