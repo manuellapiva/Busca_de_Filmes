@@ -85,6 +85,15 @@ function App () {
           value={filme}
           onChange={(e) => setFilme(e.target.value)}
         />
+
+        <input
+        type="number"
+        min="1"
+        placeholder="Digite a temporada (somente para séries)"
+        value={temporada}
+        onChange={(e) => setTemporada(e.target.value)}
+      />
+      
         <div className="botoes">
         <button onClick={buscarFilmes} disabled={loading}>
           {loading ? 'Carregando...' : 'Buscar'}
