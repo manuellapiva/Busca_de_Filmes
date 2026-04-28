@@ -65,6 +65,13 @@ function App () {
     }
   };
 
+    const limparBusca = () => {
+    setFilme('');
+    setLista([]);
+    setDetalhes(null);
+    setErro(null);
+  };
+
   return (
     <>
     
