@@ -93,7 +93,7 @@ function App () {
         value={temporada}
         onChange={(e) => setTemporada(e.target.value)}
       />
-      
+
         <div className="botoes">
         <button onClick={buscarFilmes} disabled={loading}>
           {loading ? 'Carregando...' : 'Buscar'}
@@ -101,6 +101,8 @@ function App () {
 
         <button onClick={limparBusca}>Limpar</button>
       </div> 
+      {loading && <p>⌛ Carregando...</p>}
+      {erro && <p>❌ {erro}</p>}
       </div>
     </>
   )
